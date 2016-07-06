@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="col-xs12 col-md-offset-3 col-md-6">
+    <%= simple_form_for(@product) do |f| %>
+      <%= f.error_notification %>
+      <%= f.input :name %>
+      <%= f.input :photo %>
+      <%= f.input :photo_cache, as: :hidden %>
+      <%= f.button :submit %>
+      <%= link_to "Retour à la home", products_path %>
+    <% end %>
+  </div>
+</div>

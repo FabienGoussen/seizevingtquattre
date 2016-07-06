@@ -1,0 +1,54 @@
+<div class="navbar-wagon" style="background-color: white;">
+  <!-- Logo -->
+ 
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm" style="margin-left: 400px;">
+
+    <!-- Search form -->
+
+
+    <!-- Text link -->
+    <a href="" class="navbar-wagon-item navbar-wagon-link">
+    
+              1624 COWORK'IN LILLE
+              </a>
+<% if current_user %>
+<a href="/" class="navbar-wagon-item navbar-wagon-link">HOME</a>
+<% end %>
+    <!-- Text link -->
+    <a href="#" class="navbar-wagon-item navbar-wagon-link">Qu'est ce que c'est ?</a>
+    <!-- Notification link-->
+    <a href="/" class="navbar-wagon-item navbar-wagon-link">Les espaces</a>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Contactez nous</a>
+
+ <a href="" class="navbar-wagon-item navbar-wagon-link">
+    <% if !current_user %>
+    <%= link_to edit_user_registration_path do %>
+                <%= t ".profile", default: "Admin"%>
+              <% end %>
+              <% else %>
+              <%= link_to destroy_user_session_path, method: :delete do %>
+                <i class="fa fa-sign-out"></i>  <%= t ".sign_out", default: "Log out" %>
+              <% end %>
+              <% end %>
+              </a>
+
+    <!-- Profile picture and dropdown -->
+
+    <!-- Button (call-to-action) -->
+    <a href="" class="navbar-wagon-item navbar-wagon-button btn" style="background-color: white; border-color: white; font-family: bold; color: white;">Rejoignez-nous</a>
+  </div>
+
+  <!-- Dropdown appearing on mobile only -->
+  <div class="navbar-wagon-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+        <li><a href="#">Some mobile link</a></li>
+        <li><a href="#">Other one</a></li>
+        <li><a href="#">Other one</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

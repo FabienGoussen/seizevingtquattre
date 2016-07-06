@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Seizevingtquattre</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+<link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+</head>
+<body>
+<%= render 'shared/navbar' %>
+<%= yield %>
+
+  <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAqYb2src013gOkidDeBW0W_x-Edg-n-Ow" %>
+  <%= javascript_include_tag "https://cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js" %>
+
+  <%= javascript_include_tag "application" %>
+  <%= yield(:after_js) %>
+  
+</body>
+</html>
